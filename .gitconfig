@@ -1,0 +1,7 @@
+[user]
+	email = ajowsey@ualberta.ca
+	name = ajowsey
+
+[alias]
+	st = status
+	co = checkout
