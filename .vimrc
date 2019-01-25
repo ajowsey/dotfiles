@@ -1,8 +1,16 @@
 syntax on
 colorscheme monokai
-
 set number
 set incsearch
 set hlsearch
-
+syntax enable
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set noexpandtab
+set paste
 set laststatus=2
+colorscheme monokai
+set wildmode=list,longest
+set ignorecase
+set number
