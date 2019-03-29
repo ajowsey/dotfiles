@@ -92,6 +92,10 @@ fi
 #alias la='ls -A'
 #alias l='ls -CF'
 
+alias rs='eval `resize`'                                                        
+alias ip0='ip addr show dev eth0 | grep "inet " | cut -d" " -f6'                
+alias sss='systemctl status'
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -120,5 +124,12 @@ RED="\[\033[0;31m\]"
 YELLOW="\[\033[0;33m\]"
 GREEN="\[\033[0;32m\]"
 NO_COLOR="\[\033[0m\]"
+
+function parse_ip () {
+        #ifconfig eth0 | grep -Po -m1 't \K[\d.]+' | grep -m1 ''                
+        ip addr show dev eth0 | grep "inet " | cut -d" " -f6
+}   
+                                                                                
+#PS1="$GREEN\u@\h(\$(parse_ip))$NO_COLOR:\w$NO_COLOR\$ "  
  
 PS1="$GREEN\u@\h$NO_COLOR:\w$YELLOW\$(parse_git_branch)$NO_COLOR\$ "
