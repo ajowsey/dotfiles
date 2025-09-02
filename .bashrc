@@ -96,6 +96,7 @@ alias rs='eval `resize`'
 alias ip0='ip addr show dev eth0 | grep "inet " | cut -d" " -f6'                
 alias sss='systemctl status'
 alias rm=' rm' # Using a space to keep it out of my history
+alias gdiff='git diff --color dev.. | less -R'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
